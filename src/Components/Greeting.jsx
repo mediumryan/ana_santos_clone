@@ -7,8 +7,12 @@ const GreetingWrapper = styled.section`
         display: flex;
         justify-content: center;
         p {
-            font-size: 72px;
+            font-size: 4rem;
             font-weight: 700;
+            @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+                text-align: center;
+                font-weight: 600;
+            }
         }
     }
 `;

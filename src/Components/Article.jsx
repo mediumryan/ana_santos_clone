@@ -8,6 +8,9 @@ const ArticleWrapper = styled.section`
         img {
             width: 40%;
             height: 40%;
+            @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+                width: 100%;
+            }
         }
     }
 `;

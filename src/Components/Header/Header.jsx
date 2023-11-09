@@ -1,8 +1,14 @@
 import { styled } from 'styled-components';
+import HeaderMobileMenu from './HeaderMobileMenu';
+import { useRecoilValue } from 'recoil';
+import { menuItemState } from '../../atom';
 
 const HeaderOuter = styled.header`
     margin-bottom: 2rem;
     padding: 0 3rem;
+    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+        margin-top: 2rem;
+    }
 `;
 
 const HeaderInner = styled.div`
@@ -15,12 +21,19 @@ const HeaderLogo = styled.div`
     img {
         width: 156px;
         height: 75px;
+        @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+            width: 125px;
+            height: 60px;
+        }
     }
 `;
 
 const HeaderMenu = styled.div`
     ul {
         display: flex;
+    }
+    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+        display: none;
     }
 `;
 
@@ -45,33 +58,7 @@ const MenuItem = styled.li`
 `;
 
 export default function Header() {
-    const menuItem = [
-        {
-            id: 0,
-            url: 'https://www.anasantosilustracion.com/',
-            content: 'Home',
-        },
-        {
-            id: 1,
-            url: 'https://shop.anasantosilustracion.com/es/',
-            content: 'Shop',
-        },
-        {
-            id: 2,
-            url: 'https://shop.anasantosilustracion.com/es/contacta',
-            content: 'Contact',
-        },
-        {
-            id: 3,
-            url: 'https://www.domestika.org/es/courses/206-retrato-ilustrado-en-acuarela/anasantos',
-            content: 'Curso online/Domestika',
-        },
-        {
-            id: 4,
-            url: 'https://www.domestika.org/es/courses/482-tecnicas-experimentales-de-acuarela-para-principiantes/anasantos',
-            content: '2º Curso Domestika',
-        },
-    ];
+    const menuItem = useRecoilValue(menuItemState);
 
     return (
         <HeaderOuter id="header">
@@ -93,6 +80,7 @@ export default function Header() {
                         })}
                     </ul>
                 </HeaderMenu>
+                <HeaderMobileMenu />
             </HeaderInner>
         </HeaderOuter>
     );

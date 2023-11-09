@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 const FooterOuter = styled.footer`
     position: relative;
-    padding: 2rem 5rem;
+    padding: 2rem;
 `;
 
 const FooterInner = styled.div`
@@ -32,6 +32,9 @@ const FooterWordPress = styled.div`
         &:hover {
             text-decoration: underline;
         }
+    }
+    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+        display: none;
     }
 `;
 
