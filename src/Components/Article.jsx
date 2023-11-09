@@ -1,5 +1,25 @@
-import React from 'react';
+import { styled } from 'styled-components';
+
+const ArticleWrapper = styled.section`
+    div {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+`;
 
 export default function Article() {
-    return <div>Article</div>;
+    return (
+        <ArticleWrapper>
+            <div>
+                <img
+                    src="https://www.anasantosilustracion.com/contenido/uploads/2020/02/home_web.jpg"
+                    alt="main-article-poster"
+                />
+            </div>
+        </ArticleWrapper>
+    );
 }
