@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 const ArticleWrapper = styled.section`
+    margin: 5rem 0;
     div {
         display: flex;
         justify-content: center;

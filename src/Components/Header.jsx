@@ -74,7 +74,7 @@ export default function Header() {
     ];
 
     return (
-        <HeaderOuter>
+        <HeaderOuter id="header">
             <HeaderInner>
                 <HeaderLogo>
                     <img
