@@ -33,7 +33,7 @@ const FooterWordPress = styled.div`
             text-decoration: underline;
         }
     }
-    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-width: 320px) and (max-device-width: 480px) {
         display: none;
     }
 `;

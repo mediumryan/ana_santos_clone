@@ -8,7 +8,7 @@ const ArticleWrapper = styled.section`
         img {
             width: 40%;
             height: 40%;
-            @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+            @media only screen and (min-width: 320px) and (max-device-width: 480px) {
                 width: 100%;
             }
         }

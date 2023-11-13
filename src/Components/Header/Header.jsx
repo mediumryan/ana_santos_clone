@@ -6,7 +6,7 @@ import { menuItemState } from '../../atom';
 const HeaderOuter = styled.header`
     margin-bottom: 2rem;
     padding: 0 3rem;
-    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-width: 320px) and (max-device-width: 480px) {
         margin-top: 2rem;
     }
 `;
@@ -21,7 +21,7 @@ const HeaderLogo = styled.div`
     img {
         width: 156px;
         height: 75px;
-        @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+        @media only screen and (min-width: 320px) and (max-device-width: 480px) {
             width: 125px;
             height: 60px;
         }
@@ -32,7 +32,7 @@ const HeaderMenu = styled.div`
     ul {
         display: flex;
     }
-    @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (min-width: 320px) and (max-device-width: 480px) {
         display: none;
     }
 `;
